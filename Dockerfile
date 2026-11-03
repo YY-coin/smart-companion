@@ -2,21 +2,16 @@
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-# 利用 Docker 缓存层：先拷贝 package.json
 COPY package.json ./
 RUN node -e "JSON.parse(require('fs').readFileSync('package.json','utf8'))"
-
-# 拷贝应用源码
 COPY server.js ./
 COPY data.json ./
 
-# 非 root 用户
 RUN addgroup -g 1001 -S nodejs \
  && adduser -S nodejs -u 1001 \
  && chown -R nodejs:nodejs /app
 USER nodejs
 
-# 魔搭创空间强制端口 7860
 ENV PORT=7860
 ENV NODE_ENV=production
 

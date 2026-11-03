@@ -1,0 +1,6 @@
+﻿模型配置.json
+node_modules/
+*.log
+.env
+.env.local
+__pycache__/
