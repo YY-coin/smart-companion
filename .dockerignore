@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+npm-error.log
+.env
+.env.local
+logs
+*.log
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+deploy.sh
+nginx.conf
+ecosystem.config.js
+*.zip
+模型配置.json

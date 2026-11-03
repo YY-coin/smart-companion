@@ -1,0 +1,8 @@
+{
+  "name": "smart-companion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "通用技术智能学伴（离线规则引擎）",
+  "main": "server.js",
+  "engines": { "node": ">=20" }
+}
